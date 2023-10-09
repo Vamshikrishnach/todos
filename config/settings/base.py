@@ -4,13 +4,7 @@ Base settings to build other settings files upon.
 from pathlib import Path
 
 import environ
-import os
 
-from dotenv import load_dotenv
-
-load_dotenv()
-
-DEBUG = os.getenv('DEBUG', False) == 'True'
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
 # todosproject/
 APPS_DIR = BASE_DIR / "todosproject"

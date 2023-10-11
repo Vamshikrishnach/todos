@@ -17,3 +17,23 @@ class TaskCreatorSerializer(serializers.ModelSerializer):
     class Meta:
         model = TaskCreator
         fields = '__all__'
+        
+class UserSignUpSerializer(serializers.Serializer):
+    name = serializers.CharField(required=True)
+    email = serializers.CharField(required=True)
+    password = serializers.CharField()
+
+
+class UserSignInSerializer(serializers.Serializer):
+    
+    email = serializers.CharField()
+    password = serializers.CharField()
+    
+class ForgotpasswordSerializer(serializers.Serializer):
+    email = serializers.CharField()
+    
+class ForgetPasswordVerifySerializer(serializers.Serializer):
+    email = serializers.CharField()
+    new_password = serializers.CharField()
+    otp = serializers.IntegerField()
+    

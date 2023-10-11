@@ -11,10 +11,10 @@ signin_router = routers.SimpleRouter()
 signin_router.register('signin', UserSignInViewset, basename='signin') 
 
 forgotpassword_router = routers.SimpleRouter()
-forgotpassword_router.register('forgotpassword', ForgetpasswordViewSet, basename='forgotpassword') 
+forgotpassword_router.register('forgotpassword', ForgetPasswordViewSet, basename='forgotpassword') 
 
 forgotpasswordVerify_router = routers.SimpleRouter()
-forgotpasswordVerify_router.register('forgotpasswordVerify', ForgetpasswordVerifyViewSet, basename='forgotpasswordVerify') 
+forgotpasswordVerify_router.register('forgotpasswordVerify', ForgetPasswordVerifyViewSet, basename='forgotpasswordVerify') 
 
 
 urlpatterns = [

@@ -177,8 +177,8 @@ def generate_otp():
         random_str += str(digits[index])
     return random_str
     
-class ForgetpasswordViewSet(viewsets.GenericViewSet, mixins.CreateModelMixin):
-    serializer_class = ForgotpasswordSerializer
+class ForgetPasswordViewSet(viewsets.GenericViewSet, mixins.CreateModelMixin):
+    serializer_class = ForgotPasswordSerializer
     permission_classes = [AllowAny,]
 
     def create(self, request, *args, **kwargs):
@@ -196,7 +196,7 @@ class ForgetpasswordViewSet(viewsets.GenericViewSet, mixins.CreateModelMixin):
             return Response({"Error": "email does not exists"},  status=status.HTTP_400_BAD_REQUEST)
 
 
-class ForgetpasswordVerifyViewSet(viewsets.GenericViewSet, mixins.CreateModelMixin):
+class ForgetPasswordVerifyViewSet(viewsets.GenericViewSet, mixins.CreateModelMixin):
     serializer_class = ForgetPasswordVerifySerializer
     permission_classes = [AllowAny,]
 

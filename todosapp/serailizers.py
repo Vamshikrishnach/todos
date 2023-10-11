@@ -29,7 +29,7 @@ class UserSignInSerializer(serializers.Serializer):
     email = serializers.CharField()
     password = serializers.CharField()
     
-class ForgotpasswordSerializer(serializers.Serializer):
+class ForgotPasswordSerializer(serializers.Serializer):
     email = serializers.CharField()
     
 class ForgetPasswordVerifySerializer(serializers.Serializer):
